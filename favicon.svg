@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <path fill="#17211f" d="M6 4h38l16 16v40H6z" />
+  <path fill="none" stroke="#d5f36b" stroke-width="1.5" d="M11 10h30l13 13v32H11z" />
+  <text x="32" y="39" fill="#d5f36b" font-family="Georgia,serif" font-size="19" font-weight="700" text-anchor="middle">MC</text>
+  <path stroke="#ff7048" stroke-linecap="square" stroke-width="3" d="M39 48h8" />
+</svg>

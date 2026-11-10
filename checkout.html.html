@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M-Collection | Checkout</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="checkout.js"></script>
+</head>
+<body class="checkout-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="M-Collection - Home"><span class="brand-mark" aria-hidden="true">MC</span><span>M-Collection</span></a>
+    <a class="back-link" href="index.html">← Back to collection</a>
+  </header>
+  <main class="checkout-main">
+    <div class="checkout-title"><p class="eyebrow"><span></span> THE FINAL STEP</p><h1>Review your order<br /><em>and pay.</em></h1></div>
+    <section class="checkout-layout">
+      <div class="summary-panel">
+        <div class="panel-label">Order summary</div>
+        <div class="summary-item" id="summary-item-count"><span>Items</span><strong id="summary-quantity">0</strong></div>
+        <div class="checkout-items" id="summary-products"></div>
+        <div id="summary-calculations" hidden>
+          <div class="summary-item"><span>Items subtotal</span><strong><span id="summary-price">-</span> EGP</strong></div>
+          <div class="summary-item"><span>Delivery</span><strong><span id="summary-delivery">-</span> EGP</strong></div>
+          <p class="delivery-note">Estimated delivery: 5–7 days</p>
+          <div class="summary-total"><span>Total due</span><strong><span id="summary-total">-</span> EGP</strong></div>
+        </div>
+        <div class="customer-note"><span>Deliver to</span><strong id="summary-customer">-</strong><small id="summary-address">-</small></div>
+      </div>
+      <form class="payment-panel" id="payment-form">
+        <div class="panel-label">Payment method</div>
+        <label class="payment-option"><input type="radio" name="payment" value="cash" checked required /><span><strong>Cash on delivery</strong><small>Pay the courier when your order arrives</small></span><b>01</b></label>
+        <button class="submit-button" type="submit">Confirm order <span>←</span></button>
+        <p class="form-message" id="payment-message" role="status"></p>
+        <a class="whatsapp-support" id="whatsapp-support" href="https://wa.me/201007052517" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C8.86 3 3.02 8.82 3.02 15.98c0 2.28.6 4.5 1.74 6.46L3 29l6.75-1.72a13.1 13.1 0 0 0 6.28 1.6h.01c7.17 0 13.01-5.82 13.01-12.98 0-3.47-1.36-6.73-3.82-9.19A12.94 12.94 0 0 0 16.04 3Zm0 23.66h-.01a10.9 10.9 0 0 1-5.55-1.52l-.4-.24-4.01 1.02 1.07-3.9-.26-.4a10.78 10.78 0 0 1-1.67-5.64c0-5.97 4.87-10.83 10.85-10.83 2.9 0 5.62 1.13 7.67 3.17a10.75 10.75 0 0 1 3.18 7.66c0 5.97-4.87 10.83-10.86 10.83Zm5.96-8.11c-.33-.16-1.94-.96-2.24-1.07-.3-.11-.52-.16-.74.16-.22.33-.85 1.07-1.04 1.29-.19.22-.38.25-.71.08-.33-.16-1.38-.51-2.63-1.63-.97-.86-1.63-1.93-1.82-2.26-.19-.33-.02-.5.14-.66.15-.14.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.06-.41-.03-.57-.08-.16-.74-1.78-1.02-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.7s1.17 3.13 1.33 3.35c.16.22 2.3 3.5 5.58 4.91.78.34 1.39.54 1.86.69.78.25 1.49.22 2.05.13.63-.1 1.94-.79 2.21-1.56.27-.77.27-1.43.19-1.56-.08-.14-.3-.22-.63-.38Z"/></svg>
+          Need help with an issue or return? Message us on WhatsApp.
+        </a>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
