@@ -1,16 +1,176 @@
-## Hi there 👋
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="M-Collection everyday wear, thoughtfully made." />
+  <title>M-Collection | Everyday Wear</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="promo-bar">Free shipping over 1,200 EGP · New season drop is live</div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="M-Collection - Home">
+      <span class="brand-mark" aria-hidden="true">MC</span>
+      <span>M-Collection</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#product">Collection</a>
+      <a href="#men">Men</a>
+      <a href="#women">Women</a>
+      <a href="#details">Details</a>
+      <a href="#order">Order</a>
+    </nav>
+    <button class="bag-button" type="button" data-scroll-bag>
+      <span>Bag</span>
+      <span class="bag-count" aria-label="Items in bag">0</span>
+    </button>
+  </header>
 
-<!--
-**M-Collection/M-Collection** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+  <main id="top">
+    <section class="hero" id="product">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> EDITION 01 / EVERYDAY</p>
+        <h1>The piece<br /><em>that stays.</em></h1>
+        <p class="intro">A relaxed-fit tee in soft cotton, made to be your everyday favorite.</p>
+        <div class="hero-actions">
+          <button class="primary-button" type="button" data-scroll-order>Order now <span>←</span></button>
+          <span class="availability"><i></i> Available now</span>
+        </div>
+        <div class="quick-facts" aria-label="Quick facts">
+          <div class="price-fact"><strong>500</strong><span>EGP · T-shirt</span></div>
+          <div><strong>5–7</strong><span>Delivery days</span></div>
+          <div><strong>100%</strong><span>Cotton</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="image-frame">
+          <img src="Clothes/Screenshot%202026-07-15%20141704.png" alt="Customer choosing a M-Collection shirt" />
+          <span class="image-label">S-01</span>
+        </div>
+        <div class="circle-note">Made<br />with care</div>
+        <div class="floating-card">
+          <span>Best seller</span>
+          <strong>Edition 01</strong>
+          <small>Soft cotton / easy fit</small>
+        </div>
+      </div>
+    </section>
 
-Here are some ideas to get you started:
+    <section class="brand-features" aria-label="Brand benefits">
+      <div class="feature-item">
+        <span class="feature-index">01</span>
+        <h3>Premium cotton</h3>
+        <p>Breathable, soft-touch fabric that feels effortless every day.</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-index">02</span>
+        <h3>Made to mix</h3>
+        <p>Clean silhouettes and neutral shades built for easy styling.</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-index">03</span>
+        <h3>Fast delivery</h3>
+        <p>Dependable delivery across the country within 5–7 days.</p>
+      </div>
+    </section>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    <section class="collection-section" id="collection">
+      <div class="section-heading light-heading"><span>02</span><h2>Choose your pieces</h2></div>
+      <div class="section-heading collection-category-heading" id="men"><span>01</span><h2>Men</h2></div>
+      <div class="product-grid" id="men-product-grid"></div>
+      <div class="section-heading collection-category-heading" id="women"><span>02</span><h2>Women</h2></div>
+      <div class="product-grid" id="women-product-grid"></div>
+    </section>
+
+    <dialog class="product-dialog" id="product-dialog" aria-labelledby="detail-product-name">
+      <div class="product-dialog-content">
+        <button class="dialog-close" type="button" data-close-product aria-label="Close product details">×</button>
+        <div class="detail-gallery">
+          <div class="detail-main-image">
+            <button class="gallery-arrow gallery-previous" type="button" data-gallery-step="-1" aria-label="Show previous image">‹</button>
+            <img id="detail-main-image" src="" alt="" />
+            <span class="custom-print-preview" id="detail-custom-preview" aria-hidden="true"></span>
+            <button class="gallery-arrow gallery-next" type="button" data-gallery-step="1" aria-label="Show next image">›</button>
+          </div>
+          <div class="detail-thumbnails" id="detail-thumbnails" aria-label="Product images"></div>
+        </div>
+        <section class="detail-info">
+          <p class="eyebrow"><span></span> EDITION 01 / EVERYDAY</p>
+          <h2 id="detail-product-name"></h2>
+          <div class="detail-prices"><strong id="detail-price">500 EGP</strong></div>
+          <p class="detail-shipping">Shipping: Home delivery (5–7 days) · 70 EGP</p>
+          <div class="detail-personalization" id="detail-personalization" hidden>
+            <p>You can write your name on a T-shirt.<br /><span dir="rtl">تقدر تكتب اسمك على تيشيرت</span></p>
+            <label for="detail-name">Enter your name <span aria-hidden="true">*</span></label>
+            <textarea id="detail-name" rows="3" maxlength="200" placeholder="Write the name to print"></textarea>
+          </div>
+          <fieldset class="detail-size-picker">
+            <legend>Size <span aria-hidden="true">*</span></legend>
+            <div class="detail-size-options">
+              <button type="button" data-detail-size="S" aria-pressed="false">S</button>
+              <button type="button" data-detail-size="M" aria-pressed="true">M</button>
+              <button type="button" data-detail-size="L" aria-pressed="false">L</button>
+              <button type="button" data-detail-size="XL" aria-pressed="false">XL</button>
+              <button type="button" data-detail-size="XXL" aria-pressed="false">XXL</button>
+            </div>
+          </fieldset>
+          <div class="detail-purchase">
+            <div class="detail-quantity" aria-label="Quantity">
+              <button type="button" data-detail-quantity="-1" aria-label="Decrease quantity">−</button>
+              <output id="detail-quantity">1</output>
+              <button type="button" data-detail-quantity="1" aria-label="Increase quantity">+</button>
+            </div>
+            <button class="detail-add-button" type="button" data-detail-add>Add to bag</button>
+          </div>
+          <p class="detail-message" id="detail-message" role="status" aria-live="polite"></p>
+        </section>
+      </div>
+    </dialog>
+
+    <section class="details-section" id="details">
+      <div class="section-heading"><span>03</span><h2>Details that matter</h2></div>
+      <div class="details-grid">
+        <article><span class="detail-number">01</span><h3>Cotton fabric</h3><p>Soft feel and breathable comfort for everyday wear.</p></article>
+        <article><span class="detail-number">02</span><h3>Easy fit</h3><p>A balanced cut that gives you room to move.</p></article>
+        <article><span class="detail-number">03</span><h3>Clean finish</h3><p>Thoughtful details and quality that lasts.</p></article>
+      </div>
+    </section>
+
+    <section class="bag-section" id="bag-section" aria-labelledby="bag-title">
+      <div class="bag-section-header">
+        <div><p class="eyebrow"><span></span> YOUR SELECTION</p><h2 id="bag-title">Your bag</h2></div>
+        <span class="bag-section-count"><strong id="bag-section-count">0</strong> items</span>
+      </div>
+      <div class="cart-summary" id="bag-summary">
+        <div id="cart-items" aria-live="polite"><p class="empty-cart">Your bag is empty. Add something you like.</p></div>
+      </div>
+    </section>
+
+    <section class="order-section" id="order">
+      <div class="order-intro">
+        <div class="order-heading-row">
+          <div><p class="eyebrow"><span></span> THE FINAL STEP</p><h2>Make it<br /><em>yours.</em></h2></div>
+          <a class="whatsapp-contact" href="https://wa.me/201007052517?text=Hello%2C%20I%20need%20help%20with%20an%20issue%20or%20return%20for%20my%20order." target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp for order issues or returns">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C8.86 3 3.02 8.82 3.02 15.98c0 2.28.6 4.5 1.74 6.46L3 29l6.75-1.72a13.1 13.1 0 0 0 6.28 1.6h.01c7.17 0 13.01-5.82 13.01-12.98 0-3.47-1.36-6.73-3.82-9.19A12.94 12.94 0 0 0 16.04 3Zm0 23.66h-.01a10.9 10.9 0 0 1-5.55-1.52l-.4-.24-4.01 1.02 1.07-3.9-.26-.4a10.78 10.78 0 0 1-1.67-5.64c0-5.97 4.87-10.83 10.85-10.83 2.9 0 5.62 1.13 7.67 3.17a10.75 10.75 0 0 1 3.18 7.66c0 5.97-4.87 10.83-10.86 10.83Zm5.96-8.11c-.33-.16-1.94-.96-2.24-1.07-.3-.11-.52-.16-.74.16-.22.33-.85 1.07-1.04 1.29-.19.22-.38.25-.71.08-.33-.16-1.38-.51-2.63-1.63-.97-.86-1.63-1.93-1.82-2.26-.19-.33-.02-.5.14-.66.15-.14.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.06-.41-.03-.57-.08-.16-.74-1.78-1.02-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.7s1.17 3.13 1.33 3.35c.16.22 2.3 3.5 5.58 4.91.78.34 1.39.54 1.86.69.78.25 1.49.22 2.05.13.63-.1 1.94-.79 2.21-1.56.27-.77.27-1.43.19-1.56-.08-.14-.3-.22-.63-.38Z"/></svg>
+          </a>
+        </div>
+        <p class="order-instructions">Enter your details and we'll contact you to confirm your order.</p>
+      </div>
+      <form class="order-form" id="order-form">
+        <div class="form-row"><label for="name">Full name</label><input id="name" name="name" type="text" placeholder="Enter your name" required /></div>
+        <div class="form-row"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="01xxxxxxxxx" required /></div>
+        <div class="form-row"><label for="address">Home address</label><input id="address" name="address" type="text" placeholder="Enter your home address only" required /></div>
+        <button class="submit-button" type="submit">Place order <span>←</span></button>
+        <p class="form-message" id="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer><span>M-Collection © 2026</span><span>Everyday wear, made with care.</span></footer>
+</body>
+</html>
