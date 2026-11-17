@@ -22,7 +22,6 @@
     <nav aria-label="Main navigation">
       <a href="#product">Collection</a>
       <a href="#men">Men</a>
-
       <a href="#details">Details</a>
       <a href="#order">Order</a>
     </nav>
