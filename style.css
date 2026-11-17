@@ -39,9 +39,7 @@ a { color: inherit; text-decoration: none; }
 .promo-bar { background: var(--ink); color: rgba(255,255,255,.88); font-family: var(--mono); font-size: .68rem; letter-spacing: .08em; padding: 10px 5vw; text-align: center; text-transform: uppercase; }
 .site-header { align-items: center; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; margin: 0 auto; max-width: 1320px; padding: 20px 5vw; position: sticky; top: 0; background: rgba(238,243,237,.9); backdrop-filter: blur(14px); z-index: 50; }
 .brand { align-items: center; display: flex; font-size: 1.3rem; font-weight: 800; gap: 10px; }
-.brand-mark { align-items: center; background: var(--ink); border-radius: 4px 12px 4px 4px; color: var(--lime); display: flex; font-family: var(--mono); font-size: .78rem; font-weight: 500; height: 40px; justify-content: center; letter-spacing: 0; overflow: hidden; position: relative; width: 40px; }
-.brand-mark::before { border: 1px solid rgba(213,243,107,.55); border-radius: 2px 8px 2px 2px; content: ""; inset: 4px; position: absolute; }
-.brand-mark::after { background: var(--orange); bottom: 7px; content: ""; height: 3px; position: absolute; right: 7px; width: 10px; }
+.brand-logo { display: block; flex: 0 0 auto; height: 44px; object-fit: contain; width: 44px; }
 nav { display: flex; font-size: .85rem; gap: 32px; }
 nav a { color: var(--muted); transition: color .2s ease; } nav a:hover { color: var(--orange); }
 .bag-button { background: none; border: 0; color: var(--ink); cursor: pointer; display: flex; font-size: .85rem; gap: 10px; padding: 4px; }
@@ -139,12 +137,17 @@ h1, h2, h3, p { margin-top: 0; } h1 { font-size: clamp(3.4rem, 7vw, 7.3rem); let
 .order-heading-row { align-items: flex-start; display: flex; gap: 14px; justify-content: space-between; }
 .order-heading-row .eyebrow { margin-bottom: 22px; }
 .order-heading-row h2 { margin-bottom: 24px; }
-.whatsapp-contact { align-items: center; background: #e8f7ed; border: 1px solid rgba(37, 211, 102, .35); border-radius: 50%; display: flex; flex: 0 0 auto; height: 54px; justify-content: center; margin-top: 4px; transition: background .2s, transform .2s; width: 54px; }
+.contact-options { align-items: stretch; display: flex; flex: 0 0 auto; flex-direction: column; gap: 8px; margin-top: 4px; }
+.whatsapp-contact { align-items: center; background: #e8f7ed; border: 1px solid rgba(37, 211, 102, .35); border-radius: 28px; color: #257942; display: flex; flex: 0 0 auto; font-size: .72rem; gap: 7px; justify-content: center; min-height: 44px; padding: 0 12px; transition: background .2s, transform .2s; }
 .whatsapp-contact:hover { background: #d7f3e0; transform: translateY(-2px); }
-.whatsapp-contact svg { fill: #25d366; height: 34px; width: 34px; }
+.whatsapp-contact svg { fill: #25d366; height: 26px; width: 26px; }
+.call-contact { align-items: center; border: 1px solid var(--line); display: flex; font-size: .72rem; justify-content: center; min-height: 40px; padding: 0 10px; white-space: nowrap; }
+.call-contact:hover { border-color: var(--orange); color: var(--orange); }
 .whatsapp-support { align-items: center; color: #257942; display: flex; font-size: .75rem; gap: 9px; line-height: 1.5; margin-top: 20px; }
 .whatsapp-support:hover { color: #17572e; text-decoration: underline; }
 .whatsapp-support svg { fill: #25d366; flex: 0 0 24px; height: 24px; width: 24px; }
+.call-support { color: var(--muted); display: inline-block; font-size: .75rem; margin-top: 10px; }
+.call-support:hover { color: var(--orange); text-decoration: underline; }
 .delivery-note { color: var(--muted); font-size: .72rem; margin: 10px 0 0; text-align: right; }
 footer { border-top: 1px solid var(--line); color: var(--muted); display: flex; font-family: var(--mono); font-size: .65rem; justify-content: space-between; margin: 0 5vw; padding: 24px 0 35px; }
 .back-link { color: var(--muted); font-size: .78rem; }

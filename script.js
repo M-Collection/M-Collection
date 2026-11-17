@@ -14,7 +14,6 @@ const menProducts = [
   ['Graphic T-Shirt 04', 'Black / Printed', ['T-Shirt boy/Cloth4/Front.png', 'T-Shirt boy/Cloth4/Back.png']],
   ['Graphic T-Shirt 05', 'White / Printed', ['T-Shirt boy/Cloth5/Front.png', 'T-Shirt boy/Cloth5/Back.png']],
   ['Graphic T-Shirt 06', 'Black / Printed', ['T-Shirt boy/Cloth6/Front.png', 'T-Shirt boy/Cloth6/Back.png']],
-  ['Graphic T-Shirt 07', 'Grey / Printed', ['T-Shirt boy/Cloth7/Front.png', 'T-Shirt boy/Cloth7/Back.png']],
   ['Graphic T-Shirt 08', 'Blue / Printed', ['T-Shirt boy/Cloth8/front.png', 'T-Shirt boy/Cloth8/back.png']],
   ['Graphic T-Shirt 09', 'Red / Printed', ['T-Shirt boy/Cloth9/front.png', 'T-Shirt boy/Cloth9/back.png']],
   ['Graphic T-Shirt 10', 'Red / Printed', ['T-Shirt boy/Cloth10/front.png', 'T-Shirt boy/Cloth10/Back.png']]
@@ -24,27 +23,49 @@ const menHoodieImages = [
   '6ce100b0-6d0f-4ff6-855c-707976f0e230-1_all_814.png',
   '1000006368.png', '1000006372.png', '1000006374.png', '1000006375.png',
   '1000006377.png', '1000006378.png', '1000006376.png', '1000006371.png',
-  '1000006373.png', '1000006370.png'
-];
-const womenHoodieImages = [
-  '6a187f2a-5bb1-491d-a0f2-2c2682380f24.png',
-  '8cb7fdc8-7342-458d-8918-24e37460f475.png',
-  '8e0daec4-48ac-4d77-bb74-6aea5d1bdf60.png',
-  '539115f1-e9e1-423d-8f63-2996220b9083.png',
-  '400e2295-b1aa-4c7a-bd07-4f6a8d420184.png',
-  'f88606f5-23be-4647-85a1-6c75035eed26.png',
-  '14febe52-c100-40bc-a033-30961f2f9c06.png',
-  '33924108-6ae2-4834-bcd6-2c0e71dba325.png',
-  '1000006379.png',
-  '1000006380.png'
+  '1000006373.png', '1000006370.png',
+  'WhatsApp Image 2026-11-15 at 6.21.57 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.21.57 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.21.58 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.21.58 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.21.59 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.00 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.00 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.00 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.00 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.01 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.01 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.01 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.02 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.02 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.02 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.02 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.03 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.03 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.03 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.22.03 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.27.51 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.29.23 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.29.23 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.29.24 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.29.24 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.29.25 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 6.29.25 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 7.27.40 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 7.27.50 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 7.28.31 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 7.49.25 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 7.49.34 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 7.49.45 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 7.49.54 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 7.50.06 PM.jpeg',
+  'WhatsApp Image 2026-11-15 at 7.50.20 PM.jpeg'
 ];
 const createHoodies = (gender, images) => images.map((image, index) => {
-  const folder = gender === 'Men' ? 'hoddie boy' : 'hoodie girl';
-  return [`${gender} Hoodie ${String(index + 1).padStart(2, '0')}`, 'Everyday / Hoodie', [imagePath(`${folder}/cloth ${index + 1}/${image}`)], gender, false];
+  return [`${gender} Hoodie ${String(index + 1).padStart(2, '0')}`, 'Everyday / Hoodie', [imagePath(`hoddie boy/cloth ${index + 1}/${image}`)], gender, false];
 });
 menProducts.push(...createHoodies('Men', menHoodieImages));
-const womenProducts = createHoodies('Women', womenHoodieImages);
-const products = [...menProducts, ...womenProducts];
+const products = menProducts;
 
 const bagCount = document.querySelector('.bag-count');
 const cartItemsOutput = document.querySelector('#cart-items');
@@ -83,7 +104,6 @@ function renderProducts(gridId, categoryProducts) {
 }
 
 renderProducts('men-product-grid', menProducts);
-renderProducts('women-product-grid', womenProducts);
 
 function showDetailImage(index) {
   const [name, , images] = products[activeProductIndex];
@@ -144,7 +164,10 @@ document.querySelector('#collection').addEventListener('keydown', (event) => {
 });
 
 document.querySelectorAll('[data-close-product]').forEach((button) => {
-  button.addEventListener('click', () => productDialog.close());
+  button.addEventListener('click', () => {
+    productDialog.close();
+    document.querySelector('#bag-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 });
 
 productDialog.addEventListener('click', (event) => {
@@ -229,6 +252,8 @@ detailAddButton.addEventListener('click', () => {
   detailMessage.textContent = `${product} added to your bag.`;
   detailAddButton.textContent = 'Added to bag';
   updateOrderSummary();
+  productDialog.close();
+  document.querySelector('#bag-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
 cartItemsOutput.addEventListener('click', (event) => {
