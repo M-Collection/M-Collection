@@ -60,7 +60,6 @@
         </div>
       </div>
     </section>
-
     <section class="brand-features" aria-label="Brand benefits">
       <div class="feature-item">
         <span class="feature-index">01</span>
@@ -78,7 +77,6 @@
         <p>Dependable delivery across the country within 5–7 days.</p>
       </div>
     </section>
-
     <section class="collection-section" id="collection">
       <div class="section-heading light-heading"><span>02</span><h2>Choose your pieces</h2></div>
       <div class="section-heading collection-category-heading" id="men"><span>01</span><h2>Men</h2></div>
@@ -86,7 +84,6 @@
       <div class="section-heading collection-category-heading" id="women"><span>02</span><h2>Women</h2></div>
       <div class="product-grid" id="women-product-grid"></div>
     </section>
-
     <dialog class="product-dialog" id="product-dialog" aria-labelledby="detail-product-name">
       <div class="product-dialog-content">
         <button class="dialog-close" type="button" data-close-product aria-label="Close product details">×</button>
@@ -131,7 +128,6 @@
         </section>
       </div>
     </dialog>
-
     <section class="details-section" id="details">
       <div class="section-heading"><span>03</span><h2>Details that matter</h2></div>
       <div class="details-grid">
@@ -140,7 +136,6 @@
         <article><span class="detail-number">03</span><h3>Clean finish</h3><p>Thoughtful details and quality that lasts.</p></article>
       </div>
     </section>
-
     <section class="bag-section" id="bag-section" aria-labelledby="bag-title">
       <div class="bag-section-header">
         <div><p class="eyebrow"><span></span> YOUR SELECTION</p><h2 id="bag-title">Your bag</h2></div>
@@ -150,7 +145,6 @@
         <div id="cart-items" aria-live="polite"><p class="empty-cart">Your bag is empty. Add something you like.</p></div>
       </div>
     </section>
-
     <section class="order-section" id="order">
       <div class="order-intro">
         <div class="order-heading-row">
