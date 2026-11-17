@@ -50,7 +50,7 @@
       </div>
       <div class="hero-visual">
         <div class="image-frame">
-          <img src="Clothes/Screenshot%202026-07-15%20141704.png" alt="Customer choosing a M-Collection shirt" />
+          <img src="Screenshot 2026-07-15 141704.png" alt="Customer choosing a M-Collection shirt" />
           <span class="image-label">S-01</span>
         </div>
         <div class="circle-note">Made<br />with care</div>
