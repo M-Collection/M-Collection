@@ -90,7 +90,7 @@
         <div class="detail-gallery">
           <div class="detail-main-image">
             <button class="gallery-arrow gallery-previous" type="button" data-gallery-step="-1" aria-label="Show previous image">‹</button>
-            <img id="detail-main-image" src="" alt="" />
+            <img id="Screenshot 2026-07-09 161003.png" src="" alt="" />
             <span class="custom-print-preview" id="detail-custom-preview" aria-hidden="true"></span>
             <button class="gallery-arrow gallery-next" type="button" data-gallery-step="1" aria-label="Show next image">›</button>
           </div>
